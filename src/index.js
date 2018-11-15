@@ -20,7 +20,8 @@ app.use((req, res, next) => {
 app.use(cors());
 app.use(express.json());
 app.use(require('./routes'));
+const porta = process.env.PORT || 8080;
 
-server.listen(3000, () => {
+server.listen(porta, () => {
     console.log('Server start on port');
 })
